@@ -1,0 +1,99 @@
+:root{
+    --text-color: rgb(255, 255, 255);
+    --text-color-hover: rgb(20, 20, 20);
+}
+
+*{
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(20, 20, 20);
+    
+}
+
+#header{
+    background-color: rgb(43, 0, 0);
+    text-align: center;
+    /*padding-top: 10px;
+    padding-bottom: 10px;*/
+    padding: 10px 0;
+
+}
+
+#header>img{
+    height: 100px;
+
+}
+
+#navbar{
+    background-color: rgb(27, 27, 27);
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    gap: 7px;
+
+    /*
+    width: 80vw;
+    height: 80vh;
+    */
+}
+
+#navbar>a{
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: rgb(46, 46, 46);
+    border-radius: 7px;
+    border: 2px solid rgb(46, 46, 46);
+    opacity: 0.75;
+    flex: 1;
+    
+}
+
+#navbar>a:hover{
+    font-weight: bold;
+    border: 2px solid rgb(70, 70, 70);
+
+}
+
+.container{
+    margin-top: 10px;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 20px;
+}
+
+.card{
+    width: calc(100%/3);
+}
+
+.card img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    border: 1px solid #555;
+    
+}
+
+.card .caption{
+    width: 100%;
+    margin: 1px;
+    padding: 2px;
+    background-color: rgb(100, 100, 100);
+    border-radius: 10px;
+    font-size: large;
+}
+
+/*
+h1{
+    background-color: rgb(7, 167, 241);
+}
+*/
