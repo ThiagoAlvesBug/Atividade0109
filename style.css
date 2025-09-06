@@ -73,6 +73,9 @@ body{
 
 .card{
     width: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .card img{
@@ -80,20 +83,49 @@ body{
     aspect-ratio: 16/9;
     border-radius: 10px;
     border: 1px solid #555;
-    
 }
 
-.card .caption{
-    width: 100%;
-    margin: 1px;
-    padding: 2px;
+.card .caption,
+.modal .caption{
+    padding: 10px;
     background-color: rgb(100, 100, 100);
     border-radius: 10px;
     font-size: large;
 }
 
-/*
-h1{
-    background-color: rgb(7, 167, 241);
+.modal-wrapper{
+    display: none;
+    background-color: #0000009a; /* 0.6 de opacidade (em hexa) */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
 }
+
+.modal-wrapper.is-active{
+    display: flex;
+}
+
+.modal{
+    background-color: rgb(46, 46, 46);
+    padding: 10px;
+    width: 80%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.modal img{
+    width: 100%;
+}
+
+/*
+
+hexadecimal: f 0   (15x16 + 0x1)   240
+rgb: 0-255
+
 */
