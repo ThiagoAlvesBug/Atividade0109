@@ -1,20 +1,20 @@
 const cardList = document.querySelectorAll(".card");
+const galeryList = document.querySelector(".card-galery");
 
 let modalWrapper = document.querySelector(".modal-wrapper");
 let modal = modalWrapper.querySelector(".modal");
+
+let modalWrapperGalery = document.querySelector(".modal-wrapper-galery");
+let modalGalery = modalWrapperGalery.querySelector(".modal-galery");
 
 let onCardClick = (event) => {
 
     let card = event.target.closest(".card");
     let imageSource = card.querySelector("img").src;
-    //console.log(imageSource);
-    // let title = card.querySelector(".caption>h5");
     let caption = card.querySelector(".caption");
     let title = caption.querySelector("h5"); 
-    //console.log(title);
     modal.innerHTML = card.innerHTML;
-    // console.log(teste);
-    modalWrapper.classList.add("is-active")
+    modalWrapper.classList.add("is-active");
 }
 
 let onModalWrapperClick = (event) =>{
@@ -27,7 +27,29 @@ modalWrapper.addEventListener("click", onModalWrapperClick);
 for (let index = 0; index<cardList.length; index++){
     let cardItem = cardList[index];
     cardItem.addEventListener("click", onCardClick);
-    // console.log(imageItem);
+}
+
+
+let onGaleryCardClick = (event) => {
+
+    let cardGalery = event.target.closest(".card-galery");
+    let galerySource = cardGalery.querySelector("img").src;
+    let captionGalery = cardGalery.querySelector(".caption-galery");
+    let title = captionGalery.querySelector("h5"); 
+    modal.innerHTML = card.innerHTML;
+    modalWrapperGalery.classGaleryList.add("is-active");
+}
+
+let onModalWrapperGaleryClick = (event) =>{
+    if (event.target === modalWrapperGalery){
+        modalWrapperGalery.classGaleryList.remove("is-active");
+    } 
+}
+modalWrapperGalery.addEventListener("click", onModalWrapperGaleryClick);
+
+for (let indexGalery = 0; indexGalery<cardGalery.length; indexGalery++){
+    let cardGaleryItem = cardGalery[indexGalery];
+    cardGaleryItem.addEventListener("click", onModalWrapperGaleryClick);
 }
 
 /*
